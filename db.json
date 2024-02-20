@@ -1,19 +1,174 @@
 {
-  "posts": [
+  "Stagiaires": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "nom": "bounoaman",
+      "prenom": "rachid",
+      "age": 25,
+      "telephone": "0645871265",
+      "formations": [
+        {
+          "title": "communication francaise",
+          "date": "12/06/2024"
+        },
+        {
+          "title": "business writing",
+          "date": "05/08/2024"
+        }
+      ]
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": 2,
+      "nom": "dupont",
+      "prenom": "marie",
+      "age": 22,
+      "telephone": "0712345678",
+      "formations": [
+        {
+          "title": "marketing basics",
+          "date": "20/07/2024"
+        },
+        {
+          "title": "customer service excellence",
+          "date": "10/09/2024"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "nom": "smith",
+      "prenom": "john",
+      "age": 28,
+      "telephone": "0789456123",
+      "formations": [
+        {
+          "title": "project management",
+          "date": "15/05/2024"
+        },
+        {
+          "title": "team collaboration",
+          "date": "02/10/2024"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "nom": "chen",
+      "prenom": "mei",
+      "age": 23,
+      "telephone": "0666777888",
+      "formations": [
+        {
+          "title": "data analysis",
+          "date": "08/09/2024"
+        },
+        {
+          "title": "programming fundamentals",
+          "date": "14/11/2024"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "nom": "gonzalez",
+      "prenom": "luisa",
+      "age": 30,
+      "telephone": "0798765432",
+      "formations": [
+        {
+          "title": "leadership skills",
+          "date": "18/03/2024"
+        },
+        {
+          "title": "negotiation strategies",
+          "date": "25/06/2024"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "nom": "kim",
+      "prenom": "soo",
+      "age": 26,
+      "telephone": "0678901234",
+      "formations": [
+        {
+          "title": "graphic design basics",
+          "date": "22/08/2024"
+        },
+        {
+          "title": "user experience design",
+          "date": "09/12/2024"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "nom": "miller",
+      "prenom": "emma",
+      "age": 24,
+      "telephone": "0765432109",
+      "formations": [
+        {
+          "title": "financial planning",
+          "date": "30/04/2024"
+        },
+        {
+          "title": "investment strategies",
+          "date": "11/11/2024"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "nom": "ramirez",
+      "prenom": "juan",
+      "age": 29,
+      "telephone": "0756789012",
+      "formations": [
+        {
+          "title": "english language proficiency",
+          "date": "03/07/2024"
+        },
+        {
+          "title": "business ethics",
+          "date": "01/09/2024"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "nom": "ali",
+      "prenom": "fatima",
+      "age": 27,
+      "telephone": "0687654321",
+      "formations": [
+        {
+          "title": "human resource management",
+          "date": "07/05/2024"
+        },
+        {
+          "title": "conflict resolution",
+          "date": "16/10/2024"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "nom": "thompson",
+      "prenom": "jason",
+      "age": 31,
+      "telephone": "0732109876",
+      "formations": [
+        {
+          "title": "public speaking",
+          "date": "28/02/2024"
+        },
+        {
+          "title": "effective networking",
+          "date": "13/11/2024"
+        }
+      ]
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

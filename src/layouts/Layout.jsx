@@ -3,47 +3,31 @@ import { Outlet, Link } from "react-router-dom";
 const Layout = () => {
   return (
     <>
-      <nav className="flex">
-        <ul className="px-5 text-left mt-7 flex items-center">
-          <li className="pb-3">
-            <a
-              href=""
-              className="text-sm text-gray-700 hover:text-blue-400 dark:text-gray-100"
+      <nav className="flex justify-center ">
+        <ul className="flex content-center w-1/3 justify-evenly py-5 text-2xl">
+          <li className="">
+            <Link
+              to={"/"}
+              className=" text-gray-700 hover:text-blue-400 dark:text-gray-100"
             >
-              Home
-            </a>
+              Stagiaraire
+            </Link>
           </li>
-          <li className="pb-3">
-            <a
-              href=""
-              className="text-sm text-gray-700 hover:text-blue-400 dark:text-gray-400"
+          <li className="">
+            <Link
+              to={"formations"}
+              className=" text-gray-700 hover:text-blue-400 dark:text-gray-400"
             >
-              About us
-            </a>
+              Formations
+            </Link>
           </li>
-          <li className="pb-3">
-            <a
-              href=""
-              className="text-sm text-gray-700 hover:text-blue-400 dark:text-gray-400"
+          <li className="">
+            <Link
+              to={"participations"}
+              className=" text-gray-700 hover:text-blue-400 dark:text-gray-400"
             >
-              Features
-            </a>
-          </li>
-          <li className="pb-3">
-            <a
-              href=""
-              className="text-sm text-gray-700 hover:text-blue-400 dark:text-gray-400"
-            >
-              Blog{" "}
-            </a>
-          </li>
-          <li className="pb-3">
-            <a
-              href=""
-              className="text-sm text-gray-700 hover:text-blue-400 dark:text-gray-400"
-            >
-              Testimonials
-            </a>
+              Participations
+            </Link>
           </li>
         </ul>
       </nav>
