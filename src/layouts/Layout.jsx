@@ -3,12 +3,12 @@ import { Outlet, Link } from "react-router-dom";
 const Layout = () => {
   return (
     <>
-      <nav className="flex justify-center ">
-        <ul className="flex content-center w-1/3 justify-evenly py-5 text-2xl">
+      <nav className="flex justify-center">
+        <ul className="flex content-center w-2/3 justify-evenly py-5 text-2xl">
           <li className="">
             <Link
               to={"/"}
-              className=" text-gray-700 hover:text-blue-400 dark:text-gray-100"
+              className=" text-gray-700 hover:text-blue-400 dark:text-gray-400"
             >
               Stagiaraire
             </Link>
