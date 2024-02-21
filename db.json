@@ -1,5 +1,5 @@
 {
-  "stagiaires": [
+  "employees": [
     {
       "id": 1,
       "nom": "bounoaman",
@@ -169,6 +169,40 @@
           "date": "13/11/2024"
         }
       ]
+    }
+  ],
+  "formations": [
+    {
+      "title": "communication francaise",
+      "date": "12/06/2024"
+    },
+    {
+      "title": "data analysis",
+      "date": "02/10/2024"
+    },
+    {
+      "title": "business writing",
+      "date": "05/08/2024"
+    },
+    {
+      "title": "customer service excellence",
+      "date": "08/09/2024"
+    },
+    {
+      "title": "effective networking",
+      "date": "10/09/2024"
+    },
+    {
+      "title": "english language proficiency",
+      "date": "30/04/2024"
+    },
+    {
+      "title": "user experience design",
+      "date": "25/06/2024"
+    },
+    {
+      "title": "public speaking",
+      "date": "22/08/2024"
     }
   ]
 }

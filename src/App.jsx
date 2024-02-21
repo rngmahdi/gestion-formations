@@ -19,6 +19,7 @@ function App() {
             <Route path="formations" element={<Formation />} /> 
             <Route path="participations" element={<Participation />} /> 
           </Route>
+          
         </Routes>
       </BrowserRouter>
     </>
