@@ -10,7 +10,7 @@ const Layout = () => {
               to={"/"}
               className=" text-gray-700 hover:text-blue-400 dark:text-gray-400"
             >
-              Stagiaraire
+              Employee
             </Link>
           </li>
           <li className="">
