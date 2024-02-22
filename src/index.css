@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.p-multiselect-items{
+   background-color: white;
+}
+.p-multiselect{
+   background-color: white;
+}
