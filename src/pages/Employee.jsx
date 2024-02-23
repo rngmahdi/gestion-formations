@@ -20,15 +20,15 @@ export default function Employee() {
               <h2 className="text-xl font-bold dark:text-gray-400">
                 Liste Employee
               </h2>
-              <button className="bg-blue-500 text-white p-2 rounded-lg hover:bg-blue-600 active:ring-2  active:ring-blue-200">
+              <Link to={"/employee/add"} className="bg-blue-500 text-white p-2 rounded-lg hover:bg-blue-600 active:ring-2  active:ring-blue-200">
                 Ajouter employee
-              </button>
+              </Link>
             </div>
             <div className="p-4 overflow-x-auto">
               <table className="w-full table-auto">
                 <thead>
                   <tr className="text-xs text-center text-gray-500 dark:text-gray-400">
-                    <th className="px-6 pb-3 font-medium">ID</th>
+                    {/* <th className="px-6 pb-3 font-medium">ID</th> */}
                     <th className="px-6 pb-3 font-medium">Nom </th>
                     <th className="px-6 pb-3 font-medium">Age</th>
                     <th className="px-6 pb-3 font-medium">Telephone</th>
@@ -39,8 +39,8 @@ export default function Employee() {
                 <tbody>
                   {employees.map((employee) => {
                     return (
-                      <tr className="text-xs text-center bg-gray-100 dark:text-gray-400 dark:bg-gray-800">
-                        <td className="px-6 py-5 font-medium">{employee.id}</td>
+                      <tr className="text-xs text-center bg-gray-100 dark:text-gray-400 dark:bg-gray-800" key={employee.id} >
+                        {/* <td className="px-6 py-5 font-medium">{employee.id}</td> */}
                         <td className="px-6 py-5 font-medium">
                           {employee.prenom} {employee.nom}
                         </td>
@@ -55,7 +55,7 @@ export default function Employee() {
                             {employee.formations.length > 0 &&
                             employee.formations.map((formation) => {
                               return (
-                                <li className="py-1">{formation.title}</li>
+                                <li className="py-1" key={formation.id}>{formation.title}</li>
                               );
                             })}
                             {employee.formations.length == 0 && <li>No formations</li>}

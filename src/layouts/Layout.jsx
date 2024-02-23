@@ -3,7 +3,7 @@ import { Outlet, Link } from "react-router-dom";
 const Layout = () => {
   return (
     <>
-      <nav className="flex justify-center">
+      <nav className="flex justify-center bg-gray-700">
         <ul className="flex content-center w-2/3 justify-evenly py-5 text-2xl">
           <li className="">
             <Link

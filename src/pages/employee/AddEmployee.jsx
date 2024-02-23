@@ -5,34 +5,27 @@ import Select from "react-select";
 import { MultiSelect } from "primereact/multiselect";
 // import "primereact/resources/themes/bootstrap4-light-blue/theme.css";
 
-export default function EditEmployee() {
+export default function AddEmployee() {
   let [employee, setEmployee] = useState([]);
   let [formations, setFormations] = useState([]);
-  const { id } = useParams();
-  const cities = [
-    { label: "New York", code: "NY" },
-    { label: "Rome", code: "RM" },
-    { label: "London", code: "LDN" },
-    { label: "Istanbul", code: "IST" },
-    { label: "Paris", code: "PRS" },
+  let data = [{ option: "1" }, { option: "2" }];
+  const optionsD = [
+    { name: "chocolate strawberry strawberry", label: "Chocolate" },
+    { name: "strawberry", label: "Strawberry" },
+    { name: "vanilla", label: "Vanilla" },
   ];
-  let oldForma = [];
+  const { id } = useParams();
   useEffect(() => {
     axios.get("http://localhost:8000/employees/" + id).then((res) => {
       setEmployee(res.data);
-      // let e = res.data
-      // console.log(employee);
     });
     axios.get("http://localhost:8000/formations").then((res) => {
       setFormations(res.data);
-      // data = formations;
-      // console.log(formations);
     });
   }, []);
   function confirmEdit(e) {
-    // e.preventDefault();
-    // console.log(data);
-    console.log(oldForma);
+    e.preventDefault();
+    console.log(formations);
   }
   return (
     <div>
@@ -94,12 +87,12 @@ export default function EditEmployee() {
           <div className="grid grid-cols-2 mb-2  text-center">
             <label htmlFor="formations">Formations</label>
             <Select
-              defaultValue={[formations[0],formations[1]]}
+              // defaultValue={optionsD[1]}
               placeholder="select formations"
-              // defaultInputValue={formations[0]}
+              // defaultInputValue="formations"
               isMulti
               closeMenuOnSelect={false}
-              name="formations"
+              name="colors"
               options={formations}
               className="w-80 text-left"
               isOptionSelected={(code)=>{}}
