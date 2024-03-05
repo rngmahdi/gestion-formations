@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import Select from "react-select";
-import { MultiSelect } from "primereact/multiselect";
+// import Select from "react-select";
+// import { MultiSelect } from "primereact/multiselect";
 // import "primereact/resources/themes/bootstrap4-light-blue/theme.css";
 
 export default function EditEmployee() {
@@ -93,7 +93,7 @@ export default function EditEmployee() {
           </div>
           <div className="grid grid-cols-2 mb-2  text-center">
             <label htmlFor="formations">Formations</label>
-            <Select
+            {/* <Select
               defaultValue={[formations[0],formations[1]]}
               placeholder="select formations"
               // defaultInputValue={formations[0]}
@@ -104,7 +104,7 @@ export default function EditEmployee() {
               className="w-80 text-left"
               isOptionSelected={(code)=>{}}
               // classNamePrefix="select"
-            />
+            /> */}
           </div>
           <div className=" my-2  flex justify-end ">
             <button className="rounded-lg bg-blue-500 text-white text-lg p-2">

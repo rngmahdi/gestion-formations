@@ -50,12 +50,13 @@
       "telephone": "0789456123",
       "formations": [
         {
-          "id":5,
+          "id": 5,
           "title": "project management",
           "date": "15/05/2024",
           "statu": "programme"
         },
-        {"id":6,
+        {
+          "id": 6,
           "title": "team collaboration",
           "date": "02/10/2024",
           "statu": "programme"
@@ -69,12 +70,14 @@
       "age": 23,
       "telephone": "0666777888",
       "formations": [
-        {"id":7,
+        {
+          "id": 7,
           "title": "data analysis",
           "date": "08/09/2024",
           "statu": "programme"
         },
-        {"id":8,
+        {
+          "id": 8,
           "title": "programming fundamentals",
           "date": "14/11/2024",
           "statu": "programme"
@@ -88,12 +91,14 @@
       "age": 30,
       "telephone": "0798765432",
       "formations": [
-        {"id":9,
+        {
+          "id": 9,
           "title": "leadership skills",
           "date": "18/03/2024",
           "statu": "programme"
         },
-        {"id":10,
+        {
+          "id": 10,
           "title": "negotiation strategies",
           "date": "25/06/2024",
           "statu": "programme"
@@ -107,14 +112,8 @@
       "age": 26,
       "telephone": "0678901234",
       "formations": [
-        {"id":11,
-          "title": "graphic design basics",
-          "date": "22/08/2024"
-        },
-        {"id":12,
-          "title": "user experience design",
-          "date": "09/12/2024"
-        }
+        { "id": 11, "title": "graphic design basics", "date": "22/08/2024" },
+        { "id": 12, "title": "user experience design", "date": "09/12/2024" }
       ]
     },
     {
@@ -124,12 +123,14 @@
       "age": 24,
       "telephone": "0765432109",
       "formations": [
-        {"id":13,
+        {
+          "id": 13,
           "title": "financial planning",
           "date": "30/04/2024",
           "statu": "termine"
         },
-        {"id":14,
+        {
+          "id": 14,
           "title": "investment strategies",
           "date": "11/11/2024",
           "statu": "termine"
@@ -143,12 +144,14 @@
       "age": 29,
       "telephone": "0756789012",
       "formations": [
-        {"id":15,
+        {
+          "id": 15,
           "title": "english language proficiency",
           "date": "23/02/2024",
           "statu": "en cours"
         },
-        {"id":16,
+        {
+          "id": 16,
           "title": "business ethics",
           "date": "01/09/2024",
           "statu": "programee"
@@ -162,14 +165,13 @@
       "age": 27,
       "telephone": "0687654321",
       "formations": [
-        {"id":17,
+        {
+          "id": 17,
           "title": "human resource management",
-          "date": "07/05/2024"
+          "date": "07/05/2024",
+          "statu": "termine"
         },
-        {"id":18,
-          "title": "conflict resolution",
-          "date": "16/10/2024"
-        }
+        { "id": 18, "title": "conflict resolution", "date": "16/10/2024" }
       ]
     },
     {
@@ -179,12 +181,14 @@
       "age": 31,
       "telephone": "0732109876",
       "formations": [
-        {"id":19,
+        {
+          "id": 19,
           "title": "public speaking",
           "date": "28/02/2024",
           "statu": "termine"
         },
-        {"id":20,
+        {
+          "id": 20,
           "title": "effective networking",
           "date": "13/11/2024",
           "statu": "programee"
@@ -202,34 +206,42 @@
   ],
   "formations": [
     {
+      "id": 1,
       "label": "communication francaise",
       "date": "12/06/2024"
     },
     {
+      "id": 2,
       "label": "data analysis",
       "date": "02/10/2024"
     },
     {
+      "id": 3,
       "label": "business writing",
       "date": "05/08/2024"
     },
     {
+      "id": 4,
       "label": "customer service excellence",
       "date": "08/09/2024"
     },
     {
+      "id": 5,
       "label": "effective networking",
       "date": "10/09/2024"
     },
     {
+      "id": 6,
       "label": "english language proficiency",
       "date": "30/04/2024"
     },
     {
+      "id": 7,
       "label": "user experience design",
       "date": "25/06/2024"
     },
     {
+      "id": 8,
       "label": "public speaking",
       "date": "22/08/2024"
     }

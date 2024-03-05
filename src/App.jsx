@@ -1,12 +1,11 @@
 import { useState } from "react";
-import Stagiaire from "./pages/Employee.jsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./layouts/Layout.jsx";
 import Formation from "./pages/Formation.jsx";
 import Participation from "./pages/Participation.jsx";
 import Employee from "./pages/Employee.jsx";
-import EditEmployee from "./pages/employee/EditEmployee.jsx";
-import AddEmployee from "./pages/employee/AddEmployee.jsx";
+import EditEmployee from "./components/employee/EditEmployee.jsx";
+import AddEmployee from "./components/employee/AddEmployee.jsx";
 function App() {
   const [count, setCount] = useState(0);
 
