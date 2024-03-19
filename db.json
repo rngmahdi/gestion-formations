@@ -112,8 +112,16 @@
       "age": 26,
       "telephone": "0678901234",
       "formations": [
-        { "id": 11, "title": "graphic design basics", "date": "22/08/2024" },
-        { "id": 12, "title": "user experience design", "date": "09/12/2024" }
+        {
+          "id": 11,
+          "title": "graphic design basics",
+          "date": "22/08/2024"
+        },
+        {
+          "id": 12,
+          "title": "user experience design",
+          "date": "09/12/2024"
+        }
       ]
     },
     {
@@ -171,7 +179,11 @@
           "date": "07/05/2024",
           "statu": "termine"
         },
-        { "id": 18, "title": "conflict resolution", "date": "16/10/2024" }
+        {
+          "id": 18,
+          "title": "conflict resolution",
+          "date": "16/10/2024"
+        }
       ]
     },
     {
@@ -196,11 +208,41 @@
       ]
     },
     {
-      "id": 11,
-      "nom": "thompson",
-      "prenom": "jhon",
-      "age": 31,
-      "telephone": "0732109876",
+      "id": "20",
+      "nom": "mahdi",
+      "prenom": "jaii",
+      "age": "32",
+      "telephone": "0789832989",
+      "formations": [
+        {
+          "id": 3,
+          "title": "business writing",
+          "date": "05/08/2024",
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "nom": "hamid",
+      "prenom": "asad",
+      "age": "16",
+      "telephone": "0645871265",
+      "formations": [
+        {
+          "id": 5,
+          "title": "effective networking",
+          "date": "10/09/2024",
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "id": "19",
+      "nom": "asd",
+      "prenom": "mayday",
+      "age": "28",
+      "telephone": "0798675623",
       "formations": []
     }
   ],

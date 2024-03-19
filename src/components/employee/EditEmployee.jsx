@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-// import Select from "react-select";
-// import { MultiSelect } from "primereact/multiselect";
-// import "primereact/resources/themes/bootstrap4-light-blue/theme.css";
+// import { Input } from 'antd';
 
 export default function EditEmployee() {
   let [employee, setEmployee] = useState([]);
@@ -16,12 +14,19 @@ export default function EditEmployee() {
     { label: "Istanbul", code: "IST" },
     { label: "Paris", code: "PRS" },
   ];
-  let oldForma = [];
+  let [nom,setNom] = useState();
+  let [prenom,setPrenom] = useState();
+  let [age,setAge] = useState();
+  let [telephone,setTelephone] = useState();
   useEffect(() => {
     axios.get("http://localhost:8000/employees/" + id).then((res) => {
       setEmployee(res.data);
+      setNom(employee.nom)
+      setPrenom(employee.prenom)
+      setAge(employee.age)
+      setTelephone(employee.telephone)
       // let e = res.data
-      // console.log(employee);
+      console.log(employee);
     });
     axios.get("http://localhost:8000/formations").then((res) => {
       setFormations(res.data);
@@ -29,10 +34,11 @@ export default function EditEmployee() {
       // console.log(formations);
     });
   }, []);
+
   function confirmEdit(e) {
-    // e.preventDefault();
+    e.preventDefault();
     // console.log(data);
-    console.log(oldForma);
+    console.log(nom , prenom , age , telephone);
   }
   return (
     <div>
@@ -47,7 +53,7 @@ export default function EditEmployee() {
               type="text"
               name="id"
               placeholder="id"
-              value={employee.id}
+              defaultValue={employee.id}
               className="rounded-md border-2 border-gray-300 bg-white py-0 pl-2 pr-7 text-gray-500 focus:outline-slate-500 focus:outline-1  "
             />
           </div>
@@ -56,7 +62,8 @@ export default function EditEmployee() {
             <input
               type="text"
               name="nom"
-              value={employee.nom}
+              defaultValue={employee.nom}
+              onChange={(e)=>{setNom(e.target.value)}}
               placeholder="entrer le nom"
               className="rounded-md border-2 border-gray-300 bg-white py-0 pl-2 pr-7 text-gray-500 focus:outline-slate-500 focus:outline-1 "
             />
@@ -66,7 +73,8 @@ export default function EditEmployee() {
             <input
               type="text"
               name="prenom"
-              value={employee.prenom}
+              defaultValue={employee.prenom}
+              onChange={(e)=>{setPrenom(e.target.value)}}
               placeholder="entrer le prenom"
               className="rounded-md border-2 border-gray-300 bg-white py-0 pl-2 pr-7 text-gray-500 focus:outline-slate-500 focus:outline-1"
             />
@@ -76,7 +84,9 @@ export default function EditEmployee() {
             <input
               type="number"
               name="age"
-              value={employee.age}
+              defaultValue={employee.age}
+              onChange={(e)=>{setAge(e.target.value)}}
+
               placeholder="entrer l'age"
               className="rounded-md border-2 border-gray-300 bg-white py-0 pl-2 pr-7 text-gray-500 focus:outline-slate-500 focus:outline-1"
             />
@@ -86,13 +96,14 @@ export default function EditEmployee() {
             <input
               type="text"
               name="telephone"
-              value={employee.telephone}
+              defaultValue={employee.telephone}
+              onChange={(e)=>{setTelephone(e.target.value)}}
               placeholder="entrer le telephone"
               className="rounded-md border-2 border-gray-300 bg-white py-0 pl-2 pr-7 text-gray-500 focus:outline-slate-500 focus:outline-1"
             />
           </div>
           <div className="grid grid-cols-2 mb-2  text-center">
-            <label htmlFor="formations">Formations</label>
+            {/* <label h  tmlFor="formations">Formations</label> */}
             {/* <Select
               defaultValue={[formations[0],formations[1]]}
               placeholder="select formations"

@@ -1,20 +1,26 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import { redirect, useNavigate } from "react-router-dom";
 import { Select, Flex } from "antd";
-import { useSelector, useDispatch } from "react-redux"
+import { useSelector, useDispatch } from "react-redux";
 import { setFormations } from "../../redux/actions";
 // import Select from "react-select";
 // import { MultiSelect } from "primereact/mul:tiselect";
 // import "primereact/resources/themes/bootstrap4-light-blue/theme.css";
-
+// const [age,setAge] = useState()
 export default function AddEmployee() {
+  const [id, setId] = useState("");
+  const [nom, setNom] = useState("");
+  const [prenom, setPrenom] = useState("");
+  const [age, setAge] = useState("");
+  const [telephone, setTelephone] = useState("");
+  const [formationCo, setFormationCo] = useState([]);
   const dispatch = useDispatch();
-  let [employee, setEmployee] = useState([]);
-  // let [formations, setFormations] = useState([]);
+  const navigate = useNavigate();
   const { formations } = useSelector((state) => {
     return {
-      formations: state.formations
+      formations: state.formations,
     };
   });
   useEffect(() => {
@@ -23,18 +29,45 @@ export default function AddEmployee() {
     });
     // console.log(formations);
   }, []);
-  const { id } = useParams();
-  // useEffect(() => {
-  //   axios.get("http://localhost:8000/employees/" + id).then((res) => {
-  //     setEmployee(res.data);
-  //   });
-  //   axios.get("http://localhost:8000/formations").then((res) => {
-  //     setFormations(res.data);
-  //   });
-  // }, []);
   function confirmAdd(e) {
     e.preventDefault();
-    console.log(formations);
+    let optionsSlec = [];
+
+    for (let i = 0; i < formationCo.length; i++) {
+      for (let j = 0; j < formations.length; j++) {
+        if (formationCo[i] == formations[j].id) {
+          optionsSlec.push({
+            id: formations[j].id,
+            title: formations[j].label,
+            date: formations[j].date,
+            status: "complete",
+          });
+        }
+      }
+    }
+    setFormationCo(optionsSlec);
+    let data = {
+      id: id,
+      nom: nom,
+      prenom: prenom,
+      age: age,
+      telephone: telephone,
+      formations: optionsSlec,
+    };
+    axios.post("http://localhost:8000/employees",data).then((response) => {
+      console.log(response)
+    });
+    // redirect("/employees");
+    navigate("/")
+    // console.log({
+    //   id: id,
+    //   nom: nom,
+    //   prenom: prenom,
+    //   age: age,
+    //   telephone: telephone,
+    //   formtaions: optionsSlec,
+    // });
+    // console.log(formationCo);
   }
   return (
     <div>
@@ -49,7 +82,9 @@ export default function AddEmployee() {
               type="text"
               name="id"
               placeholder="id"
-              value={employee.id}
+              required
+              // value={employee.id}
+              onChange={(e) => setId(e.target.value)}
               className="rounded-md border-2 border-gray-300 bg-white py-0 pl-2 pr-7 text-gray-500 focus:outline-slate-500 focus:outline-1  "
             />
           </div>
@@ -58,7 +93,9 @@ export default function AddEmployee() {
             <input
               type="text"
               name="nom"
-              value={employee.nom}
+              // value={employee.nom}
+              onChange={(e) => setNom(e.target.value)}
+              required
               placeholder="entrer le nom"
               className="rounded-md border-2 border-gray-300 bg-white py-0 pl-2 pr-7 text-gray-500 focus:outline-slate-500 focus:outline-1 "
             />
@@ -68,7 +105,9 @@ export default function AddEmployee() {
             <input
               type="text"
               name="prenom"
-              value={employee.prenom}
+              onChange={(e) => setPrenom(e.target.value)}
+              required
+              // value={employee.prenom}
               placeholder="entrer le prenom"
               className="rounded-md border-2 border-gray-300 bg-white py-0 pl-2 pr-7 text-gray-500 focus:outline-slate-500 focus:outline-1"
             />
@@ -78,7 +117,9 @@ export default function AddEmployee() {
             <input
               type="number"
               name="age"
-              value={employee.age}
+              required
+              // value={employee.age}
+              onChange={(e) => setAge(e.target.value)}
               placeholder="entrer l'age"
               className="rounded-md border-2 border-gray-300 bg-white py-0 pl-2 pr-7 text-gray-500 focus:outline-slate-500 focus:outline-1"
             />
@@ -88,7 +129,8 @@ export default function AddEmployee() {
             <input
               type="text"
               name="telephone"
-              value={employee.telephone}
+              required
+              onChange={(e) => setTelephone(e.target.value)}
               placeholder="entrer le telephone"
               className="rounded-md border-2 border-gray-300 bg-white py-0 pl-2 pr-7 text-gray-500 focus:outline-slate-500 focus:outline-1"
             />
@@ -102,10 +144,13 @@ export default function AddEmployee() {
               style={{ maxWidth: 250 }}
               placeholder="Selecter les formations"
               allowClear
-              
+              fieldNames={{ value: "id", label: "label" }}
               optionFilterProp="children"
               options={formations}
               showSearch
+              onChange={(options) => {
+                setFormationCo(options);
+              }}
               filterOption={(input, option) =>
                 (option?.label ?? "").includes(input)
               }

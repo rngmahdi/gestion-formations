@@ -36,10 +36,6 @@ export default function reducer(state = initialState, action) {
      case "setEmployeeFormVisibility":
        return { ...state, employeeFormVisibility: action.payload };
  
-     //* Shared
-     case "setIsVisibale":
-       return { ...state, isVisibale: !state.isVisibale };
- 
      //* Formation
  
      case "setFormations":

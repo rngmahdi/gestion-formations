@@ -11,9 +11,9 @@ export function setSelectedEmployee(data) {
   return { type: "setSelectedEmployee", payload: data };
 }
 
-export function setEmployeeFormVisibility(data) {
-  return { type: "setEmployeeFormVisibility", payload: data };
-}
+// export function setEmployeeFormVisibility(data) {
+//   return { type: "setEmployeeFormVisibility", payload: data };
+// }
 
 // Shared
 export function setIsVisibale() {
@@ -33,9 +33,9 @@ export function setSelectedFormation(data) {
   return { type: "setSelectedFormation", payload: data };
 }
 
-export function setFormationFormVisibility(data) {
-  return { type: "setFormationFormVisibility", payload: data };
-}
+// export function setFormationFormVisibility(data) {
+//   return { type: "setFormationFormVisibility", payload: data };
+// }
 
 // Assign
 export function setSelectedFormationAssign(data) {
@@ -45,6 +45,6 @@ export function setSelectedFormationAssign(data) {
 export function setAssignFormType(data) {
   return { type: "setAssignFormType", payload: data };
 }
-export function setAssignFormVisibility(data) {
-  return { type: "setAssignFormVisibility", payload: data };
-}
+// export function setAssignFormVisibility(data) {
+//   return { type: "setAssignFormVisibility", payload: data };
+// }

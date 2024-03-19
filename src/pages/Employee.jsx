@@ -18,8 +18,8 @@ export default function Employee() {
     axios.get("http://localhost:8000/employees").then((res) => {
       dispatch(setEmployees(res.data));
     });
-    console.log(employees);
-  }, []);
+  }, [dispatch]);
+  // console.log(employees);
   return (
     <div>
       <section className="items-center lg:flex bg-gray-50  font-poppins dark:bg-gray-800 ">
@@ -49,13 +49,14 @@ export default function Employee() {
                   </tr>
                 </thead>
                 <tbody>
-                  {employees.map((employee) => {
+                  {employees ? employees.map((employee) => {
+                    console.log(employee)
                     return (
                       <tr
                         className="text-xs text-center bg-gray-100 dark:text-gray-400 dark:bg-gray-800"
                         key={employee.id}
                       >
-                        <td className="px-6 py-5 font-medium">{employee.id}</td> 
+                        {/* <td className="px-6 py-5 font-medium">{employee.id}</td>  */}
                         <td className="px-6 py-5 font-medium">
                           {employee.prenom} {employee.nom}
                         </td>
@@ -113,7 +114,7 @@ export default function Employee() {
                         </td>
                       </tr>
                     );
-                  })}
+                  }) : "" }
                 </tbody>
               </table>
             </div>
