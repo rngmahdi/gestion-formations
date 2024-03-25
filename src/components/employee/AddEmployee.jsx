@@ -38,7 +38,7 @@ export default function AddEmployee() {
         if (formationCo[i] == formations[j].id) {
           optionsSlec.push({
             id: formations[j].id,
-            title: formations[j].label,
+            title: formations[j].title,
             date: formations[j].date,
             status: "complete",
           });
@@ -47,7 +47,6 @@ export default function AddEmployee() {
     }
     setFormationCo(optionsSlec);
     let data = {
-      id: id,
       nom: nom,
       prenom: prenom,
       age: age,
@@ -57,17 +56,7 @@ export default function AddEmployee() {
     axios.post("http://localhost:8000/employees",data).then((response) => {
       console.log(response)
     });
-    // redirect("/employees");
     navigate("/")
-    // console.log({
-    //   id: id,
-    //   nom: nom,
-    //   prenom: prenom,
-    //   age: age,
-    //   telephone: telephone,
-    //   formtaions: optionsSlec,
-    // });
-    // console.log(formationCo);
   }
   return (
     <div>
@@ -76,7 +65,7 @@ export default function AddEmployee() {
         onSubmit={(e) => confirmAdd(e)}
       >
         <div className="flex flex-col mt-4 h-screen">
-          <div className="grid grid-cols-2 mb-2 text-center">
+          {/* <div className="grid grid-cols-2 mb-2 text-center">
             <label htmlFor="id">Id</label>
             <input
               type="text"
@@ -87,7 +76,7 @@ export default function AddEmployee() {
               onChange={(e) => setId(e.target.value)}
               className="rounded-md border-2 border-gray-300 bg-white py-0 pl-2 pr-7 text-gray-500 focus:outline-slate-500 focus:outline-1  "
             />
-          </div>
+          </div> */}
           <div className="grid grid-cols-2 mb-2 text-center">
             <label htmlFor="nom">Nom</label>
             <input
@@ -144,7 +133,7 @@ export default function AddEmployee() {
               style={{ maxWidth: 250 }}
               placeholder="Selecter les formations"
               allowClear
-              fieldNames={{ value: "id", label: "label" }}
+              fieldNames={{ value: "id", label: "title" }}
               optionFilterProp="children"
               options={formations}
               showSearch
@@ -163,10 +152,10 @@ export default function AddEmployee() {
             {/* </Flex> */}
           </div>
           <div className=" my-2  flex justify-end ">
-            <button className="rounded-lg bg-blue-500 text-white text-lg p-2">
+            <button className="rounded-lg bg-blue-500 text-white text-lg p-2" type="submit">
               Confirm
             </button>
-            <button className="rounded-lg bg-blue-500 text-white text-lg p-2 mx-4">
+            <button className="rounded-lg bg-blue-500 text-white text-lg p-2 mx-4" type="reset">
               Annuler
             </button>
           </div>

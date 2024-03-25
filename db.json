@@ -1,290 +1,87 @@
 {
   "employees": [
     {
-      "id": "1",
-      "nom": "bounoaman",
-      "prenom": "rachid",
-      "age": 25,
-      "telephone": "0645871265",
+      "id": "bdb7",
+      "nom": "iwis",
+      "prenom": "nhad",
+      "age": "24",
+      "telephone": "0712457896",
       "formations": [
         {
-          "id": 1,
+          "id": "2",
+          "title": "data analysis",
+          "date": "02/10/2024",
+          "status": "complete"
+        },
+        {
+          "id": "1",
           "title": "communication francaise",
           "date": "12/06/2024",
-          "statu": "programme"
-        },
-        {
-          "id": 2,
-          "title": "business writing",
-          "date": "05/08/2024",
-          "statu": "programme"
-        }
-      ]
-    },
-    {
-      "id": "2",
-      "nom": "dupont",
-      "prenom": "marie",
-      "age": 22,
-      "telephone": "0712345678",
-      "formations": [
-        {
-          "id": 3,
-          "title": "marketing basics",
-          "date": "20/07/2024",
-          "statu": "programme"
-        },
-        {
-          "id": 4,
-          "title": "customer service excellence",
-          "date": "10/09/2024",
-          "statu": "programme"
-        }
-      ]
-    },
-    {
-      "id": "3",
-      "nom": "smith",
-      "prenom": "john",
-      "age": 28,
-      "telephone": "0789456123",
-      "formations": [
-        {
-          "id": 5,
-          "title": "project management",
-          "date": "15/05/2024",
-          "statu": "programme"
-        },
-        {
-          "id": 6,
-          "title": "team collaboration",
-          "date": "02/10/2024",
-          "statu": "programme"
-        }
-      ]
-    },
-    {
-      "id": "4",
-      "nom": "chen",
-      "prenom": "mei",
-      "age": 23,
-      "telephone": "0666777888",
-      "formations": [
-        {
-          "id": 7,
-          "title": "data analysis",
-          "date": "08/09/2024",
-          "statu": "programme"
-        },
-        {
-          "id": 8,
-          "title": "programming fundamentals",
-          "date": "14/11/2024",
-          "statu": "programme"
-        }
-      ]
-    },
-    {
-      "id": "5",
-      "nom": "gonzalez",
-      "prenom": "luisa",
-      "age": 30,
-      "telephone": "0798765432",
-      "formations": [
-        {
-          "id": 9,
-          "title": "leadership skills",
-          "date": "18/03/2024",
-          "statu": "programme"
-        },
-        {
-          "id": 10,
-          "title": "negotiation strategies",
-          "date": "25/06/2024",
-          "statu": "programme"
-        }
-      ]
-    },
-    {
-      "id": "6",
-      "nom": "kim",
-      "prenom": "soo",
-      "age": 26,
-      "telephone": "0678901234",
-      "formations": [
-        {
-          "id": 11,
-          "title": "graphic design basics",
-          "date": "22/08/2024"
-        },
-        {
-          "id": 12,
-          "title": "user experience design",
-          "date": "09/12/2024"
-        }
-      ]
-    },
-    {
-      "id": "7",
-      "nom": "miller",
-      "prenom": "emma",
-      "age": 24,
-      "telephone": "0765432109",
-      "formations": [
-        {
-          "id": 13,
-          "title": "financial planning",
-          "date": "30/04/2024",
-          "statu": "termine"
-        },
-        {
-          "id": 14,
-          "title": "investment strategies",
-          "date": "11/11/2024",
-          "statu": "termine"
-        }
-      ]
-    },
-    {
-      "id": "8",
-      "nom": "ramirez",
-      "prenom": "juan",
-      "age": 29,
-      "telephone": "0756789012",
-      "formations": [
-        {
-          "id": 15,
-          "title": "english language proficiency",
-          "date": "23/02/2024",
-          "statu": "en cours"
-        },
-        {
-          "id": 16,
-          "title": "business ethics",
-          "date": "01/09/2024",
-          "statu": "programee"
-        }
-      ]
-    },
-    {
-      "id": "9",
-      "nom": "ali",
-      "prenom": "fatima",
-      "age": 27,
-      "telephone": "0687654321",
-      "formations": [
-        {
-          "id": 17,
-          "title": "human resource management",
-          "date": "07/05/2024",
-          "statu": "termine"
-        },
-        {
-          "id": 18,
-          "title": "conflict resolution",
-          "date": "16/10/2024"
-        }
-      ]
-    },
-    {
-      "id": "10",
-      "nom": "thompson",
-      "prenom": "jason",
-      "age": 31,
-      "telephone": "0732109876",
-      "formations": [
-        {
-          "id": 19,
-          "title": "public speaking",
-          "date": "28/02/2024",
-          "statu": "termine"
-        },
-        {
-          "id": 20,
-          "title": "effective networking",
-          "date": "13/11/2024",
-          "statu": "programee"
-        }
-      ]
-    },
-    {
-      "id": "20",
-      "nom": "mahdi",
-      "prenom": "jaii",
-      "age": "32",
-      "telephone": "0789832989",
-      "formations": [
-        {
-          "id": 3,
-          "title": "business writing",
-          "date": "05/08/2024",
           "status": "complete"
         }
       ]
     },
     {
-      "id": "12",
-      "nom": "hamid",
-      "prenom": "asad",
-      "age": "16",
-      "telephone": "0645871265",
-      "formations": [
-        {
-          "id": 5,
-          "title": "effective networking",
-          "date": "10/09/2024",
-          "status": "complete"
-        }
-      ]
-    },
-    {
-      "id": "19",
-      "nom": "asd",
-      "prenom": "mayday",
+      "id": "b4f2",
+      "nom": "ELAMAIM",
+      "prenom": "ELMEHDI",
       "age": "28",
-      "telephone": "0798675623",
-      "formations": []
+      "telephone": "0709942454",
+      "formations": [
+        {
+          "id": "3",
+          "title": "business writing",
+          "date": "05/08/2024",
+          "status": "complete"
+        },
+        {
+          "id": "5",
+          "title": "effective networking",
+          "date": "10/09/2024",
+          "status": "complete"
+        }
+      ]
     }
   ],
   "formations": [
     {
       "id": "1",
-      "label": "communication francaise",
+      "title": "communication francaise",
       "date": "12/06/2024"
     },
     {
       "id": "2",
-      "label": "data analysis",
+      "title": "data analysis",
       "date": "02/10/2024"
     },
     {
       "id": "3",
-      "label": "business writing",
+      "title": "business writing",
       "date": "05/08/2024"
     },
     {
       "id": "4",
-      "label": "customer service excellence",
+      "title": "customer service excellence",
       "date": "08/09/2024"
     },
     {
       "id": "5",
-      "label": "effective networking",
+      "title": "effective networking",
       "date": "10/09/2024"
     },
     {
       "id": "6",
-      "label": "english language proficiency",
+      "title": "english language proficiency",
       "date": "30/04/2024"
     },
     {
       "id": "7",
-      "label": "user experience design",
+      "title": "user experience design",
       "date": "25/06/2024"
     },
     {
       "id": "8",
-      "label": "public speaking",
+      "title": "public speaking",
       "date": "22/08/2024"
     }
   ]
